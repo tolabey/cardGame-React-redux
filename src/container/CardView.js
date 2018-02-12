@@ -4,6 +4,7 @@ import {bindActionCreators} from "redux"
 import {randomCardAction} from "../actions/randomCardAction"
 import {initilizeCards1} from "../actions/user1Action"
 import {initilizeCards2} from "../actions/user2Action"
+import PlayCard from "./PlayCards"
 const svgs = require.context('../svg-cards', true, /\.svg$/)
 
 
@@ -24,7 +25,6 @@ class CardView extends Component {
              a = this.randomCards()
             this.props.initilizeCards2(a)
         }
-        console.log(this.props.user1Cards)
     }
 
     //render all cards
@@ -59,6 +59,7 @@ class CardView extends Component {
         return (
             <div className="cardView">
                 <button onClick={() => this.randomCardsControl()}>RANDOM ICIN BURAYA TIKLA</button>
+                <PlayCards></PlayCards>
             </div>
         );
     }
