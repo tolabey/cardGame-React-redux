@@ -8,9 +8,17 @@ export function addCardToUser2(cardId) {
 }
 
 export const INITIAL_CARDS2 = "INITIAL_CARDS2";
-export function initilizeCards2(cards) {
+export function initilizeCards2(payload) {
     return {
         type: INITIAL_CARDS2,
-        payload: cards,
+        payload,
     }
+}
+
+export const REMOVE_CARD_FROM_USER2 = "REMOVE_CARD_FROM_USER2";
+export function removeCardFromUser2() {
+    return {
+        type: REMOVE_CARD_FROM_USER2,
+    }
+
 }
